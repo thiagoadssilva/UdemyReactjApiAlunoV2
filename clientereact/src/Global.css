@@ -12,10 +12,12 @@
 }
 
 html{
+    width: 1200px;
+    margin: auto;
     font-size: 62.5%;/*Para trabalhar com REM pois agora p padrão vai ser 1rem=10px*/
     overflow-x: hidden;
     scroll-behavior: smooth;
-    scroll-padding-top: 6.5rem
+    scroll-padding-top: 6.5rem;
 }
 
 body{

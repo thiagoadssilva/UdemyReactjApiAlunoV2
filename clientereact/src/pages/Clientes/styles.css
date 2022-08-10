@@ -1,0 +1,50 @@
+.cliente-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+header div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 14rem;
+    height: 14rem;
+}
+
+.botao-fechar{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cliente-container header .button{
+    width: 20rem;
+    margin: auto;
+}
+
+.cliente-container header span{
+    font-size: 2.5rem;
+}
+
+.pesquisa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pesquisa button{
+    width: 50%;
+}
+
