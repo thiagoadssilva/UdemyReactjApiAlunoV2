@@ -1,14 +1,23 @@
-
-
-.login-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .logo{
-    width: 50%;
     height: 50%;
+    width: 50%;
+
+    margin-right: 1.5rem;
 }
 
+.section-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    position: absolute;
+    top: 25%; 
+    margin-top: -25px;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
