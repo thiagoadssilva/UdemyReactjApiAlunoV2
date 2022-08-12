@@ -3,13 +3,15 @@ import {FiXCircle, FiEdit, FiUserX} from 'react-icons/fi'
 import {Link} from 'react-router-dom'
 
 export default function Clientes(){
+    
+
     return(
         <div className='cliente-container'>
 
             <header>
                 <span>Seja Bem-Vindo <strong>Thiago jose da silva</strong>!</span>
                 <div>
-                    <Link className='button' to="cliente/novo/0"><button>Novo Cliente</button></Link>
+                    <Link className='button' to="/cliente/novo/0"><button>Novo Cliente</button></Link>
                     <span className='botao-fechar'><FiXCircle size={35} color="$17202a" /></span>
                 </div>
                 

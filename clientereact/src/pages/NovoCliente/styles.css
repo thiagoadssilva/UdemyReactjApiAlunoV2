@@ -1,3 +1,43 @@
-.novo-cliente-container .content h1{
-    color: '#FFFFFF';
+.formulario{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cadastro-esquerdo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
+
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+}
+
+.cadastro-esquerdo h1{
+    color: #FFFFFF;
+    font-size: 5rem;
+}
+
+.cadastro-direito{
+    width: 100%;
+}
+
+.cadastro-direito-form{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }

@@ -10,7 +10,7 @@ export default function Rotas(){
             <Routes>
                 <Route path='/' exact element={<Login />}></Route>
                 <Route path='/clientes'  element={<Clientes />}></Route>
-                <Route path='clientes/cliente/novo/:clienteid'  element={<NovoCliente />}></Route>
+                <Route path='/cliente/novo/:clienteId'  element={<NovoCliente />}></Route>
             </Routes>
         </BrowserRouter>
     )
