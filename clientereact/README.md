@@ -17,3 +17,12 @@
 * Referência: https://react-icons.github.io/react-icons/
 
 <hr>
+
+## Axios
+
+    npm install axios
+
+
+* Referência: https://www.npmjs.com/package/axios
+
+<hr>

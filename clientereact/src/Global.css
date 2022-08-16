@@ -6,7 +6,7 @@
     outline: 5px; /*A propriedade CSS outline é uma propriedade abreviada para configurar uma ou mais das propriedades de contorno*/
     box-sizing: border-box; /*Se você definir box-sizing: border-box;em um elemento, o preenchimento e a borda serão incluídos na largura e na altura:*/
     text-decoration: none !important; /*Defina diferentes decorações de texto para os elementos*/
-    text-transform: capitalize; /*capitalize : coloca em maiúscula a primeira letra de cada palavra no texto selecionado*/
+    /*text-transform: capitalize;*/ /*capitalize : coloca em maiúscula a primeira letra de cada palavra no texto selecionado*/
 
     transition: all ease .2s; /*As transições CSS fornecem uma maneira de controlar a velocidade da animação ao alterar as propriedades CSS.*/
 }
