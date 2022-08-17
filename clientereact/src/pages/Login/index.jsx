@@ -4,14 +4,12 @@ import logoImage from '../../assets/01.svg';
 import {useState} from 'react'
 import api from '../../services/api'
 import {useNavigate} from 'react-router-dom'
-import axios from 'axios';
 
 
 /*
 {
   "email": "thiago.ads.silva@gmail.com",
-  "password": "Maca2506@",
-  "confirmPassword": "Maca2506@"
+  "confirmPassword": "Numsey#123"
 }
 */
 

@@ -27,7 +27,7 @@ export default function Clientes(){
             },
             token
         )
-    })
+    },[])
 
     async function logout(){
         try {
@@ -37,6 +37,22 @@ export default function Clientes(){
             navigate('/')
         } catch (error) {
             alert('Não foi possível fazer o logout ' + error )
+        }
+    }
+
+    async function editCliente(id){
+        try {
+            navigate(`/cliente/novo/${id}`)
+        } catch (error) {
+            alert('Não foi possível editar o cliente')
+        }
+    }
+
+    async function deleteCliente(id){
+        try {
+            await api.delete(`/alunos/${id}`, authorization)
+        } catch (error) {
+            alert('Cliente não foi excluído. ' + error)
         }
     }
 
@@ -67,8 +83,8 @@ export default function Clientes(){
                                 <b>{aluno.idade}</b>
                             </div>
                             <div className='card-botao'>
-                                <span className='botao-fechar'><FiEdit size={35} /></span>
-                                <span className='botao-fechar'><FiUserX size={35} /></span>
+                                <span className='botao-fechar' onClick={() => editCliente(aluno.id)}><FiEdit size={35} /></span>
+                                <span className='botao-fechar' onClick={() => deleteCliente(aluno.id)}><FiUserX size={35} /></span>
                             </div>
                         </div>
                     ))}    
