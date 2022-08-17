@@ -51,18 +51,21 @@ img{
     width: 50%;
 }
 
+.teste{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 .card {
     display: flex;
     align-items: center;
     justify-content: center;
-
     /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;*/
 
     background-color: #6C63FF;
-
-    width: 50%;
+    width: 40%;
     border-radius: 1.5rem;
   }
 

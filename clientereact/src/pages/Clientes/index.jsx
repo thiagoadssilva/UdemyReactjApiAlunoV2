@@ -1,18 +1,53 @@
 import './styles.css'
 import {FiXCircle, FiEdit, FiUserX} from 'react-icons/fi'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
+import {useState, useEffect} from 'react'
+import api from '../../services/api'
 
 export default function Clientes(){
     
+    const [nome, setNome] = useState('')
+    const [alunos, setAlunos] = useState([])
+
+    const email = localStorage.getItem('email')
+    const token = localStorage.getItem('token')
+
+    const navigate = useNavigate();
+
+    const authorization = {
+        headers:{
+            Authorization: `Bearer ${token}`
+        }
+    }
+
+    useEffect(() =>{
+        api.get('api/alunos', authorization).then(
+            response => {
+                setAlunos(response.data)
+            },
+            token
+        )
+    })
+
+    async function logout(){
+        try {
+            localStorage.clear()
+            localStorage.setItem('token', '') 
+            authorization.headers = ''
+            navigate('/')
+        } catch (error) {
+            alert('Não foi possível fazer o logout ' + error )
+        }
+    }
 
     return(
         <div className='cliente-container'>
 
             <header>
-                <span>Seja Bem-Vindo <strong>Thiago jose da silva</strong>!</span>
+                <span>Seja Bem-Vindo <strong>{email}</strong></span>
                 <div>
                     <Link className='button' to="/cliente/novo/0"><button>Novo Cliente</button></Link>
-                    <span className='botao-fechar'><FiXCircle size={35} color="$17202a" /></span>
+                    <span className='botao-fechar' onClick={logout}><FiXCircle size={35} color="$17202a" /></span>
                 </div>
                 
             </header>
@@ -23,30 +58,21 @@ export default function Clientes(){
             </div>
 
             <form action="" >
-                
-                <div class="card">
-                    <div class="container">
-                        <b>Thiago jose da silva</b>
-                        <b>thiago.ads.silva@gmail.com</b>
-                        <b>37 anos</b>
-                    </div>
-                    <div className='card-botao'>
-                        <span className='botao-fechar'><FiEdit size={35} /></span>
-                        <span className='botao-fechar'><FiUserX size={35} /></span>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="container">
-                        <b>Thiago jose da silva</b>
-                        <b>thiago.ads.silva@gmail.com</b>
-                        <b>37 anos</b>
-                    </div>
-                    <div className='card-botao'>
-                        <span className='botao-fechar'><FiEdit size={35} /></span>
-                        <span className='botao-fechar'><FiUserX size={35} /></span>
-                    </div>
-                </div>
-                
+                <div className='teste'>
+                    {alunos.map(aluno =>(
+                        <div class="card" key={aluno.id}>
+                            <div class="container">
+                                <b>{aluno.nome}</b>
+                                <b>{aluno.email}</b>
+                                <b>{aluno.idade}</b>
+                            </div>
+                            <div className='card-botao'>
+                                <span className='botao-fechar'><FiEdit size={35} /></span>
+                                <span className='botao-fechar'><FiUserX size={35} /></span>
+                            </div>
+                        </div>
+                    ))}    
+                </div>             
             </form>
 
         </div>
