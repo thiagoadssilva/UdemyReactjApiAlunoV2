@@ -4,9 +4,8 @@ import {Link, useNavigate} from 'react-router-dom'
 import {useState, useEffect} from 'react'
 import api from '../../services/api'
 
-export default function Clientes(){
+export default function Alunos(){
     
-    const [nome, setNome] = useState('')
     const [alunos, setAlunos] = useState([])
 
     const email = localStorage.getItem('email')
@@ -40,29 +39,29 @@ export default function Clientes(){
         }
     }
 
-    async function editCliente(id){
+    async function editAluno(id){
         try {
-            navigate(`/cliente/novo/${id}`)
+            navigate(`/aluno/novo/${id}`)
         } catch (error) {
-            alert('Não foi possível editar o cliente')
+            alert('Não foi possível editar o Aluno')
         }
     }
 
-    async function deleteCliente(id){
+    async function deleteAluno(id){
         try {
             await api.delete(`/alunos/${id}`, authorization)
         } catch (error) {
-            alert('Cliente não foi excluído. ' + error)
+            alert('Aluno não foi excluído. ' + error)
         }
     }
 
     return(
-        <div className='cliente-container'>
+        <div className='Aluno-container'>
 
             <header>
                 <span>Seja Bem-Vindo <strong>{email}</strong></span>
                 <div>
-                    <Link className='button' to="/cliente/novo/0"><button>Novo Cliente</button></Link>
+                    <Link className='button' to="/aluno/novo/0"><button>Novo Aluno</button></Link>
                     <span className='botao-fechar' onClick={logout}><FiXCircle size={35} color="$17202a" /></span>
                 </div>
                 
@@ -70,7 +69,6 @@ export default function Clientes(){
 
             <div className='pesquisa'>
                 <input type="text" placeholder='Nome'/>
-                <button type='button'>Filtrar cliente por nome (parcial)</button>
             </div>
 
             <form action="" >
@@ -83,8 +81,8 @@ export default function Clientes(){
                                 <b>{aluno.idade}</b>
                             </div>
                             <div className='card-botao'>
-                                <span className='botao-fechar' onClick={() => editCliente(aluno.id)}><FiEdit size={35} /></span>
-                                <span className='botao-fechar' onClick={() => deleteCliente(aluno.id)}><FiUserX size={35} /></span>
+                                <span className='botao-fechar' onClick={() => editAluno(aluno.id)}><FiEdit size={35} /></span>
+                                <span className='botao-fechar' onClick={() => deleteAluno(aluno.id)}><FiUserX size={35} /></span>
                             </div>
                         </div>
                     ))}    

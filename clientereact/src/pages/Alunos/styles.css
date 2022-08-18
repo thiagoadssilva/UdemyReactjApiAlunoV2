@@ -31,13 +31,13 @@ img{
     color: #FFFFFF;
 }
 
-.cliente-container header .button{
+.aluno-container header .button{
     width: 20rem;
     margin: auto;
     
 }
 
-.cliente-container header span{
+.aluno-container header span{
     font-size: 2.5rem;
 }
 

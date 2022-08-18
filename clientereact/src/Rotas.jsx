@@ -1,16 +1,16 @@
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 
 import Login from './pages/Login'
-import Clientes from './pages/Clientes'
-import NovoCliente from './pages/NovoCliente'
+import Alunos from './pages/Alunos'
+import NovoAluno from './pages/NovoAluno'
 
 export default function Rotas(){
     return(
         <BrowserRouter>
             <Routes>
                 <Route path='/' exact element={<Login />}></Route>
-                <Route path='/clientes'  element={<Clientes />}></Route>
-                <Route path='/cliente/novo/:clienteId'  element={<NovoCliente />}></Route>
+                <Route path='/alunos'  element={<Alunos />}></Route>
+                <Route path='/aluno/novo/:alunoId'  element={<NovoAluno />}></Route>
             </Routes>
         </BrowserRouter>
     )
