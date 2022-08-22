@@ -34,7 +34,7 @@ export default function Login(){
             localStorage.setItem('token', response.data.token)
             localStorage.setItem('expiration', response.data.expiration)
 
-            navigate('/clientes')
+            navigate('/alunos')
 
         } catch (error) {
             alert('O login falhou ->' + error)
