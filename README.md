@@ -17,39 +17,3 @@ https://github.com/thiagoadssilva/UdemyReactjApiAlunoV2/blob/main/clientereact/R
 ## Projeto Publicado: Não foi publicado
 
 <hr>
-
-
-## Imagens do projeto
-
-### Entrando no sistema (Usando aqui JWT)
-
-![Tela Principal](images/01.PNG)
-
-<hr>
-
-### Listando os Alunos
-
-![Tela Principal](images/02.PNG)
-
-<hr>
-
-### Atualizando os Alunos
-
-![Tela Principal](images/03.PNG)
-
-<hr>
-
-### cadastrando os Alunos
-
-![Tela Principal](images/04.PNG)
-
-<hr>
-
-### Excluindo os Alunos
-
-![Tela Principal](images/05.PNG)
-
-<hr>
-
-
-# Observações: Projeto que falta fazer algumas melhorias (layout, mensagens, etc...)
